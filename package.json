@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "To Do List Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sagar Das",
+  "license": "ISC"
+}
