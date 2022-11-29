@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <!-- Css Style -->
+    <link rel="stylesheet" href="/Css/home.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4aac9664a9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- logo -->
+        <div class="logo">
+            <h1>TO DO LIST</h1>
+        </div>
+        <!-- logo end -->
+
+        <!-- Task details-->
+        <form action="" method="POST">
+            <div class="task-input">
+                <!-- description -->
+                <div class="desc">
+                    <input type="text" name="desc" placeholder="Task to be done..">
+                </div>
+                <!-- description end  -->
+                <div class="flex-deatils">
+                    <!-- Category -->
+                    <div class="cat-details">
+
+                        <select name="cat" required>
+                            <option value="default" id="default" disabled selected>Choose a category</option>
+                            <option value="personal" class="demo">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="school">School</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <!--  Category end -->
+                    <!-- date -->
+                    <div class="date-details">
+                        <input type="date" name="date" required>
+                    </div>
+                    <!-- date end -->
+                </div>
+            </div>
+            <div class="flex-buttons">
+                <!-- Add Task -->
+                <div class="add-task">
+                    <button type="submit"><i class="fa-solid fa-plus"></i> <span>ADD TASK</span></button>
+                </div>
+                <!-- Add Task end-->
+
+                <!-- Delete Task -->
+                <div class="delete-task">
+                    <button type="button"><i class="fa-solid fa-trash"></i> <span>DELETE TASK</span></button>
+                </div>
+                 <!-- Delete Task end -->
+            </div>
+        </form>
+
+        <!-- Task Details end  -->
+        <!-- Tasks -->
+        <div class="tasks">
+            <ul>
+                <li>
+                    <div class="task-bar">
+                        <div class="click-btn">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="task-date-details">
+                            <div class="task-desc">
+                                <span>Complete the Project</span>
+                            </div>
+                            <div class="date-list">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span>
+                                    25 Apr/09/2022
+                                </span>
+                            </div>
+                        </div>
+                        <div class="task-cat">
+                            <span>WORK</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Tasks end -->
+    </div>
+
+
+    <script src="/Js/home.js"></script>
+
+
+
+</body>
+
+</html>
