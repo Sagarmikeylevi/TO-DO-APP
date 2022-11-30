@@ -225,7 +225,7 @@ li{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     border-radius: 10px;
@@ -233,40 +233,64 @@ li{
 }
 
 .click-btn {
-    margin-left: -3%;
+    margin-left: 2%;
     height: 1.5rem;
     width: 1.5rem;
     background: rgb(156, 24, 50);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
     border-radius: 8px;
     cursor: pointer;
 }
 
-.click-btn i{
-   font-size:large;
-   color: aliceblue;
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    margin-left: 2%;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: transparent;  
+    z-index: 1;
 }
 
+input[type="checkbox"]::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 1.4rem;
+    color: aliceblue;
+}
+
+
+
+
+
+
+
 .task-date-details{
-    margin-left: -6%;
+    /* margin-left: -6%; */
+    width: 20rem;
+    
 }
 .task-desc{
     margin-top: 0.3rem;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: rgb(49, 12, 84);
     font-weight: 900;
     letter-spacing: 2px;
     opacity: 0.8;
+    /* text-align: left; */
+    
+    
 }
 .date-list{
-    text-align: left;
+    /* text-align: left; */
     font-size: 0.6rem;
     font-weight: 600;
     letter-spacing: 2px;
     color:dimgrey;
     opacity: 0.8;
     margin-top: 2px;
+   
 }
 
 .task-cat{
@@ -282,38 +306,55 @@ li{
    color: aliceblue;
    letter-spacing: 1px;
 }
+
+/* Design for different category */
+.WORK{
+    background-color:lightcoral;
+        
+}
+.PERSONAL{
+    background-color:darkorchid;
+    width: 5.5rem;
+
+}
+.CLEANING{
+    background-color: green;
+    width: 5.5rem;
+}
+.OTHER{
+    background-color: rgb(215, 36, 232);
+}
 /* Tasks end */
 
 /* Responsiveness*/
 @media screen and (min-width: 600px){
 
-    .task-date-details{
+    /* .task-date-details{
         margin-left: -10%;
-    }
-    .task-desc{
-        font-size: 1rem;
-    }
+    } */
+    
+    
+
+}
+
+
+
+@media screen and (min-width: 800px){
+    /* .task-date-details{
+        margin-left: -15%;
+    } */
+
     .date-list{
         font-size: 0.8rem
     }
-
-}
-
-@media screen and (min-width: 700px){
-    .task-date-details{
-        margin-left: -15%;
-    }
-
-    .click-btn{
-        margin-left: -10%;
-    }
-}
-
-@media screen and (min-width: 800px){
-    .task-date-details{
-        margin-left: -15%;
-    }
     
+    .task-desc{
+        font-size: 1rem;
+        text-align: left;
+    }
+    .date-list{
+        text-align: left;
+    }
     .task-bar{
         width: 60%;
         margin-left: 18%;
@@ -321,13 +362,13 @@ li{
     .task-cat{
         margin-left: 10%;
     }
-    .click-btn{
-        margin-left: -5%;
-    }
+   
 }
 
 @media screen and (min-width: 1000px){
-    
+    .click-btn {
+        margin-left: -5%;
+    }
     .task-cat{
         margin-left: 20%;
     }

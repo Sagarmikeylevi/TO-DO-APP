@@ -24,7 +24,7 @@
         <!-- logo end -->
 
         <!-- Task details-->
-        <form action="" method="POST">
+        <form action="/create-tasks" method="POST">
             <div class="task-input">
                 <!-- description -->
                 <div class="desc">
@@ -57,45 +57,64 @@
                 <div class="add-task">
                     <button type="submit"><i class="fa-solid fa-plus"></i> <span>ADD TASK</span></button>
                 </div>
-                <!-- Add Task end-->
-
-                <!-- Delete Task -->
-                <div class="delete-task">
-                    <button type="button"><i class="fa-solid fa-trash"></i> <span>DELETE TASK</span></button>
-                </div>
-                 <!-- Delete Task end -->
-            </div>
         </form>
+        <!-- Add Task end-->
 
-        <!-- Task Details end  -->
-        <!-- Tasks -->
-        <div class="tasks">
-            <ul>
+        <!-- Delete Task -->
+        <form action="/delete-task" method="POST">
+            <div class="delete-task">
+                <button type="submit"><i class="fa-solid fa-trash"></i> <span>DELETE TASK</span></button>
+            </div>
+
+
+
+            <!-- Delete Task end -->
+    </div>
+
+
+    <!-- Task Details end  -->
+    <!-- Tasks -->
+    <div class="tasks">
+        <ul>
+            <% for(let task of taskList){ %>
+
                 <li>
                     <div class="task-bar">
                         <div class="click-btn">
-                            <i class="fa-solid fa-check"></i>
+                            <input type="checkbox" name="delechack" class="delechack" onclick="checkedOrNot()"
+                         value="<%=task._id %>">
+                            
                         </div>
                         <div class="task-date-details">
                             <div class="task-desc">
-                                <span>Complete the Project</span>
+                                <span>
+                                    <%= task.desc %>
+                                </span>
                             </div>
                             <div class="date-list">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 <span>
-                                    25 Apr/09/2022
+                                    <%= task.date %>
                                 </span>
                             </div>
                         </div>
-                        <div class="task-cat">
-                            <span>WORK</span>
+                        <div class="task-cat <%= task.cat %>">
+                            <span>
+                                <%= task.cat %>
+                            </span>
                         </div>
                     </div>
                 </li>
-            </ul>
-        </div>
-        <!-- Tasks end -->
+
+
+                <% } %>
+
+        </ul>
     </div>
+    </form>
+    <!-- Tasks end -->
+    </div>
+
 
 
     <script src="/Js/home.js"></script>
