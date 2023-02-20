@@ -10,6 +10,8 @@ The TODO APP is a simple web application designed to help users manage their dai
 - JavaScript
 - Express.js
 
+![Screenshot (150)](https://user-images.githubusercontent.com/114811573/220102101-956702c1-81d5-4484-94bd-2044a47479e7.png)
+
 ## Installation
 - Clone the repository
 - Install dependencies with npm install
