@@ -21,4 +21,5 @@ The TODO APP is a simple web application designed to help users manage their dai
 ## Deployement
 Project already deployed on Render. Visit: https://todosapp.onrender.com/
 
-
+## Video Link
+Visit: https://www.youtube.com/watch?v=ElfDaA1Uea4
